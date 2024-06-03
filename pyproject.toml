@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "django-core-template"
+version = "0.0.1"
+description = ""
+authors = ["Carlos Eduardo <ducameneses16@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12"
+Django = "^5.0.6"
+pillow = "^10.3.0"
+django-cleanup = "^8.1.0"
+django-allauth = "^0.63.2"
+django-htmx = "^1.17.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+ruff = "^0.4.5"
+
+[tool.ruff]
+line-length = 88
+exclude = ['.venv','manage.py']
+extend-exclude = ['migrations']
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
