@@ -1,6 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/django,visualstudiocode,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,visualstudiocode,python
-.vscode/settings.json
+
 ### Django ###
 *.log
 *.pot
@@ -265,7 +265,7 @@ pyrightconfig.json
 
 ### VisualStudioCode ###
 .vscode/*
-!.vscode/settings.json
+.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
