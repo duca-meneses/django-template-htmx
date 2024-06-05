@@ -1,0 +1,1 @@
+# Django Template with htmx, tailwind and alpine.js
