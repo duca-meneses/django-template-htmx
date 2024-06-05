@@ -6,7 +6,7 @@ authors = ["Carlos Eduardo <ducameneses16@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.12"
+python = "^3.12"
 Django = "^5.0.6"
 pillow = "^10.3.0"
 django-cleanup = "^8.1.0"
