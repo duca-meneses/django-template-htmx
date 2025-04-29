@@ -58,7 +58,7 @@ def profile_emailchange(request):
             # check if email already exists
             email = form.cleaned_data['email']
             if User.objects.filter(email=email).exclude(id=request.user.id).exists():
-                messages.warning(request, f'{email} is already in use')
+                messages.warning(request, f'{email} já está sendo utilizado')
                 return redirect('profile-settings')
 
             form.save()
@@ -70,7 +70,7 @@ def profile_emailchange(request):
 
             return redirect('profile-settings')
         else:
-            messages.warning(request, 'Form not valid')
+            messages.warning(request, 'Formulário não é valido')
             return redirect('profile-settings')
 
     return redirect('home')
