@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "^4.1.4"
+  },
+  "scripts": {
+    "tailwind": "tailwindcss -i ./backend/static/css/tailwind.css -o ./backend/static/css/style.css",
+    "watch": "tailwindcss -i ./backend/static/css/tailwind.css -o ./backend/static/css/style.css --watch",
+    "minify": "tailwindcss -i ./backend/static/css/tailwind.css -o ./backend/static/css/style.min.css --minify",
+    "build": "npm run tailwind && npm run minify"
+  }
+}
