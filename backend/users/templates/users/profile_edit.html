@@ -3,9 +3,9 @@
 {% block content %}
 
 {% if onboarding %}
-<h1 class="mb-4">Complete your Profile</h1>
+<h1 class="mb-4">Complete o seu Perfil</h1>
 {% else %}
-<h1 class="mb-4">Edit your Profile</h1>
+<h1 class="mb-4 text-center">Edite o seu Perfil</h1>
 {% endif %}
 
 <div class="text-center flex flex-col items-center">
@@ -18,11 +18,12 @@
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" >Submit</button>
+    
+    <button type="submit" >Salvar</button>
     {% if onboarding %}
-    <a class="button button-gray ml-1" href="{% url 'home' %}">Skip</a>
+    <a class="button button-gray ml-1" href="{% url 'home' %}">Pular</a>
     {% else %}
-    <a class="button button-gray ml-1" href="{{ request.META.HTTP_REFERER }}">Cancel</a>
+    <a class="button button-gray ml-1" href="{{ request.META.HTTP_REFERER }}">Cancelar</a>
     {% endif %}
 </form>
 

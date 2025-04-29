@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1 class="mb-8">Account Settings</h1>
+<h1 class="mb-8">Configurações da conta</h1>
 
 <table class="w-full text-sm text-left text-gray-500">
     <tbody>
@@ -14,11 +14,11 @@
                 {% if user.email %}{{ user.email }}{% else %}No Email{% endif %}
             </td>
             <td class="pt-4 pb-1 px-6">
-                <a id="email-edit" class="cursor-pointer font-medium text-blue-600 hover:underline"
+                <a id="email-edit" class="bg-blue-500 hover:bg-blue-600 rounded-lg cursor-pointer font-medium text-white p-2"
                     hx-get="{% url 'profile-emailchange' %}"
                     hx-target="#email-address"
                     hx-swap="innerHTML">
-                    Edit
+                    Editar
                 </a>
             </td>
         </tr>
@@ -27,27 +27,27 @@
             </th>
             <td class="px-6 pb-4">
                 {% if user.emailaddress_set.first.verified %}
-                <span class="text-green-500">Verified</span>{% else %}
-                <span class="text-amber-500">Not verified</span>
+                <span class="text-green-500">Verificado</span>{% else %}
+                <span class="text-amber-500">Não verificado</span>
                 {% endif %}
             </td>
             <td class="px-6 pb-4">
                 <a href="{% url 'profile-emailverify' %}" class="font-medium text-blue-600 hover:underline">
-                    {% if not user.emailaddress_set.first.verified %}Verify{% endif %}
+                    {% if not user.emailaddress_set.first.verified %}Verificar{% endif %}
                 </a>
             </td>
         </tr>
 
         <tr class="border-b">
             <th scope="row" class="py-4 text-base font-bold text-gray-900">
-                Delete Account
+                Apagar conta
             </th>
             <td class="px-6 py-4">
-                Once deleted, account is gone. Forever.
+                Uma vez apagada, a conta desaparece. Para sempre
             </td>
             <td class="px-6 py-4">
-                <a href="{% url 'profile-delete' %}" class="font-medium text-red-600 hover:underline">
-                    Delete
+                <a href="{% url 'profile-delete' %}" class="button-red rounded-lg font-medium text-white p-2  ">
+                    Apagar
                 </a>
             </td>
         </tr>
